@@ -1,0 +1,82 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="#FF332973"
+    tools:context=".SignInScreen">
+
+
+    <ImageView
+        android:id="@+id/imageView"
+        android:layout_width="179dp"
+        android:layout_height="95dp"
+        android:layout_marginTop="72dp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:srcCompat="@drawable/ic_logo" />
+    <ImageView
+        android:id="@+id/text"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="16dp"
+        android:text="@string/app_name"
+        android:textColor="@color/orange"
+        app:layout_constraintEnd_toEndOf="@id/imageView"
+        app:layout_constraintStart_toStartOf="@id/imageView"
+        app:layout_constraintTop_toBottomOf="@id/imageView"
+        app:srcCompat="@drawable/wc_text" />
+
+    <EditText
+        android:id="@+id/edt_email"
+        style="@style/edtTransparent"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginHorizontal="10dp"
+        android:layout_marginTop="72dp"
+        android:foregroundGravity="center"
+        android:hint="@string/e_mail"
+        android:inputType="textPersonName"
+        app:layout_constraintTop_toBottomOf="@+id/text"/>
+
+    <EditText
+        android:id="@+id/edt_passwd"
+        style="@style/edtTransparent"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginHorizontal="10dp"
+        android:layout_marginTop="16dp"
+        android:hint="@string/password"
+        android:inputType="textPassword"
+        app:layout_constraintStart_toStartOf="@id/edt_email"
+        app:layout_constraintTop_toBottomOf="@id/edt_email"/>
+
+
+    <Button
+        android:id="@+id/btnSignIn"
+        style="@style/ButtonOrange"
+        android:layout_width="match_parent"
+        android:layout_height="57dp"
+        android:layout_marginHorizontal="16dp"
+        android:layout_marginBottom="16dp"
+        android:backgroundTint="@color/orange"
+        android:foregroundGravity="center"
+        android:text="@string/signin"
+        app:layout_constraintBottom_toTopOf="@+id/btnReg"/>
+    <Button
+        android:id="@+id/btnReg"
+        style="@style/buttTransparent"
+        android:layout_width="match_parent"
+        android:layout_height="57dp"
+        android:layout_marginHorizontal="16dp"
+        android:layout_marginBottom="24dp"
+        android:backgroundTint="#00FFFFFF"
+        android:text="@string/regist"
+        app:layout_constraintBottom_toBottomOf="parent" />
+    <!--android:foregroundGravity="center"
+    android:textFontWeight="900"
+    android:textColor="@color/orange"-->
+    <!--style="@style/transparentStyle"-->
+</androidx.constraintlayout.widget.ConstraintLayout>
